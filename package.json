@@ -1,0 +1,17 @@
+{
+  "name": "roofing-giant-smartinspect-fictional-demo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Public read-only Roofing Giant SmartInspect example using only fictional data.",
+  "scripts": {
+    "test": "node --test qa/content.test.mjs",
+    "test:browser": "node qa/browser.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "axe-core": "4.10.3",
+    "playwright": "1.55.0"
+  }
+}

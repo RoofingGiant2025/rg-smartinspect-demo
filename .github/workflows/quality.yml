@@ -1,0 +1,32 @@
+name: SmartInspect demo quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Content, mobile workflow, and accessibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout read-only demo
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install QA dependencies
+        run: npm ci
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Validate sample data and safety constraints
+        run: npm test
+      - name: Run browser and WCAG 2.1 AA checks
+        run: npm run test:browser

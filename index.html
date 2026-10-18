@@ -6,102 +6,49 @@
 <meta name="theme-color" content="#0a2037">
 <meta name="description" content="Explore Roofing Giant SmartInspect with fictional inspection and estimate data. Public, read-only, and no sign-in required.">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>SmartInspect Demo | Roofing Giant</title>
-<style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#12263b;background:#eff3f7;font-synthesis:none}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #2d88ff;outline-offset:3px}
-.top{background:#081d33;color:#fff;position:sticky;top:0;z-index:5;box-shadow:0 4px 18px #06152622}
-.top-inner{max-width:1120px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:16px;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:11px}.brand-mark{background:#d62242;border-radius:11px;width:40px;height:40px;display:grid;place-items:center;font-size:20px;font-weight:900}.brand-name{font-weight:800;font-size:18px;letter-spacing:-.5px}.brand-sub{font-size:12px;letter-spacing:1.3px;color:#b8cada;text-transform:uppercase}.top-pill{border:1px solid #5a7d9c;border-radius:50px;padding:8px 11px;font-size:12px;color:#e0ecf5;white-space:nowrap}
-.shell{max-width:1120px;margin:auto;padding:0 20px 65px}
-.hero{margin:23px 0 18px;border-radius:22px;background:linear-gradient(128deg,#123a58,#081c31);color:white;position:relative;overflow:hidden;padding:30px}
-.hero:after{content:"";width:230px;height:230px;position:absolute;border:38px solid #ffffff08;border-radius:50%;right:-68px;top:-92px}
-.eyebrow{font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:2px;color:#8cdbdf}
-.hero h1{font-size:clamp(28px,5.2vw,44px);line-height:1.12;letter-spacing:-1.5px;margin:14px 0;max-width:700px}
-.hero p{font-size:16px;line-height:1.55;color:#d1e0ed;max-width:670px;margin:0 0 19px}
-.hero-acts{display:flex;flex-wrap:wrap;gap:10px}.btn{background:#d92342;border:1px solid #d92342;border-radius:11px;padding:12px 16px;font-weight:750;color:white}
-.btn.secondary{background:#ffffff12;border-color:#ffffff55}.btn.light{background:white;color:#153a53;border-color:#c9d7e5}
-.safe{display:flex;align-items:center;gap:10px;background:white;border:1px solid #cfe0e8;border-radius:15px;padding:13px 16px;margin-bottom:17px;font-size:13px;line-height:1.4;color:#496075}
-.safe-dot{width:9px;height:9px;border-radius:50%;background:#22a78a;flex:none}.safe b{color:#173a4f}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
-.stat{background:white;border:1px solid #d7e1e9;border-radius:15px;padding:17px}.stat strong{display:block;font-size:26px;color:#112e48}.stat span{font-size:12px;color:#61798d;line-height:1.4}
-.workspace{background:#fff;border:1px solid #d7e1e9;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #0b2b4011}
-.workspace-head{padding:21px 24px;background:#fff;display:flex;gap:15px;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e9ee;flex-wrap:wrap}
-.kicker{color:#718294;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;font-weight:800}.workspace-head h2{margin:6px 0 2px;font-size:22px;letter-spacing:-.5px}
-.muted{color:#65798b}.tiny{font-size:12px}.selector{display:flex;gap:8px;flex-wrap:wrap}
-.selector button{background:#f0f5f8;color:#34506a;padding:10px 12px;border:1px solid #d5e1ea;border-radius:10px;font-weight:750;font-size:13px}
-.selector button[aria-pressed="true"]{background:#0b3852;border-color:#0b3852;color:white}
-.tabs{display:flex;gap:5px;padding:7px 15px;border-bottom:1px solid #dce6ed;overflow:auto;scrollbar-width:thin;background:#f9fbfc}
-.tab{white-space:nowrap;border:0;background:transparent;color:#597083;padding:14px 15px;border-bottom:3px solid transparent;font-weight:750;font-size:13px}
-.tab[aria-selected="true"]{color:#cf1f41;border-bottom-color:#cf1f41}
-.panel{padding:25px;min-height:350px}.panel[hidden]{display:none!important}
-.panel h3{margin:0 0 8px;font-size:23px;letter-spacing:-.6px}.lead{line-height:1.5;color:#61778b;margin:0 0 18px;font-size:14px}
-.two{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}.card{background:#fff;border:1px solid #dce6ed;border-radius:15px;padding:19px}.soft{background:#f5f9fb}.card h4{font-size:16px;margin:0 0 10px}.note{background:#fff4e6;border:1px solid #f0d4a5;padding:12px;border-radius:11px;color:#764f1e;font-size:13px;line-height:1.5}
-.roofmap{background:linear-gradient(180deg,#e4eef2,#f9fafb);border-radius:14px;padding:12px;position:relative}
-.roofmap svg{width:100%;height:auto}.roofmap .caption{font-size:11px;color:#668092;text-align:center}
-.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:19px}
-.flow-step{border:1px solid #dbe5ed;border-radius:13px;padding:15px;font-size:12px}.flow-step b{display:block;margin:9px 0 5px;font-size:14px}.number{display:inline-grid;place-items:center;background:#e9f1f7;color:#153950;border-radius:50%;width:30px;height:30px;font-weight:800}
-.progress-line{height:9px;background:#e6ecf0;border-radius:12px;overflow:hidden;margin:15px 0 8px}.progress-line span{display:block;background:#2c8d80;height:100%;width:80%}
-.filterset{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.filterset button{padding:9px 12px;border-radius:9px;border:1px solid #d6e2e9;background:#f8fafc;color:#466279;font-size:12px;font-weight:700}
-.filterset button[aria-pressed=true]{background:#163b55;color:white}
-.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.checks details{border:1px solid #dde7ee;border-radius:11px;padding:13px;transition:background .15s}
-.checks summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:680}
-.checks summary::-webkit-details-marker{display:none}
-.checks details[open]{background:#f4f9fb}.checks details p{font-size:12px;line-height:1.5;color:#58738a;margin:10px 0 0 25px}.checks details .status{margin-left:auto}
-.status{font-size:10px;letter-spacing:.2px;font-weight:800;border-radius:30px;padding:5px 8px;white-space:nowrap}
-.status.ok{color:#17715e;background:#e3f5ef}.status.flag{color:#b45b21;background:#fff0df}.status.limit{color:#6d6a82;background:#eeecf6}.status.pending{color:#8b4d28;background:#fbebd8}
-.report-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.report-row{padding:15px 0;border-top:1px solid #e5ebef;display:grid;grid-template-columns:1fr auto;gap:8px}.report-row h4{margin:0 0 6px;font-size:15px}.report-row p{margin:0;color:#677d8e;font-size:13px;line-height:1.5}.qty{font-size:17px;font-weight:800;color:#1d435c;white-space:nowrap}
-.money{font-size:27px;font-weight:850;letter-spacing:-.6px}.money-sub{font-size:12px;color:#677d8e}
-.brands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:18px}.brandbtn{border:1px solid #d9e4eb;border-radius:12px;padding:15px;background:#f8fafb;text-align:left;color:#2c5268;font-weight:780}
-.brandbtn[aria-pressed=true]{background:#173f58;color:#fff;border-color:#173f58}
-.rules{margin:0;padding-left:20px;color:#526e80;font-size:13px;line-height:1.85}.rulebox{background:#fff8ed;border:1px solid #ecd4ab;border-radius:13px;padding:18px}
-.lock-icon{display:grid;place-items:center;width:60px;height:60px;border-radius:16px;background:#ffe8ea;color:#bd2544;font-size:27px}
-.grade-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grade{padding:15px;background:#f5f8fa;border:1px solid #dfe8ef;border-radius:12px}.grade b{display:block;font-size:14px;margin-bottom:7px}.grade span{font-size:12px;color:#587187}
-.footer{font-size:12px;color:#738a9d;padding:24px 6px 0;line-height:1.65;text-align:center}
-.footer b{color:#34586d}
-@media(max-width:760px){
-.shell{padding:0 12px 42px}.top-inner{padding:11px 14px}.brand-name{font-size:16px}.top-pill{font-size:11px;padding:7px}
-.hero{padding:24px 21px;margin-top:14px}.hero h1{font-size:30px}
-.stats{grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:13px}.stat strong{font-size:24px}
-.workspace-head{padding:19px}.panel{padding:17px}.two{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.checks{grid-template-columns:1fr}.brands{grid-template-columns:1fr 1fr}.grade-grid{grid-template-columns:1fr}
-.tabs{padding:5px 10px}.tab{padding:13px 11px;font-size:12px}
-}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-@media print{.top,.hero-acts,.tabs,.selector,.filterset{display:none}.panel[hidden]{display:block!important}.panel{break-after:page}.shell{max-width:100%}}
-</style>
+<title>SmartInspect Interactive Demo | Roofing Giant</title>
+<link rel="canonical" href="https://roofinggiant2025.github.io/rg-smartinspect-demo/">
+<meta property="og:title" content="Roofing Giant SmartInspect — Explore the No-Login Demo">
+<meta property="og:description" content="Explore 30-point fictional roof inspections, sample evidence links and illustrative proposals in a private-data-free public demo.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<header class="top"><div class="top-inner"><div class="brand"><span class="brand-mark" aria-hidden="true">RG</span><div><div class="brand-name">ROOFING GIANT</div><div class="brand-sub">SmartInspect</div></div></div><span class="top-pill">OPEN DEMO · NO LOGIN</span></div></header>
+<a class="skip-link" href="#workspace">Skip to interactive demo</a>
+<header class="top"><div class="top-inner"><div class="brand"><span class="brand-mark" aria-hidden="true">RG</span><div><div class="brand-name">ROOFING GIANT</div><div class="brand-sub">SmartInspect</div></div></div><span class="top-pill" aria-label="Public demonstration, no login required"><span class="pill-long">OPEN DEMO · NO LOGIN</span><span class="pill-short" aria-hidden="true">NO LOGIN</span></span></div></header>
 <main class="shell">
-<section class="hero">
+<section class="hero" aria-labelledby="heroTitle">
   <div class="eyebrow">Roofing intelligence, made understandable</div>
-  <h1>Explore SmartInspect.<br>No password. No email code.</h1>
+  <h1 id="heroTitle">Explore SmartInspect.<br>No password. No email code.</h1>
   <p>Walk through a guided inspection, sample evidence-linked scope, and roofing-system review using <strong>entirely fictional data</strong>.</p>
   <div class="hero-acts"><button class="btn" id="startDemo">Explore the inspection</button><button class="btn secondary" id="viewSample">See proposal preview</button></div>
 </section>
-<div class="safe"><span class="safe-dot" aria-hidden="true"></span><span><b>Public read-only sandbox.</b> No accounts, uploads, hidden sign-in, customer records, emails, approvals, or connection to the live Roofing Giant CRM.</span></div>
+<div class="safe"><span class="safe-dot" aria-hidden="true"></span><span><b>Public read-only sandbox.</b> No account or upload is required, nothing is sent to Roofing Giant through this demo, and there is no connection to the live CRM. All project data below is invented.</span></div>
 <div class="stats">
   <div class="stat"><strong>30</strong><span>Inspection checkpoints per sample</span></div>
   <div class="stat"><strong>2</strong><span>Fully fictional example properties</span></div>
   <div class="stat"><strong>0</strong><span>Real homeowner records</span></div>
   <div class="stat"><strong>Off</strong><span>Publishing and quote acceptance</span></div>
 </div>
-<section class="workspace" aria-label="SmartInspect interactive public demo">
- <div class="workspace-head"><div><span class="kicker">DEMO WORKSPACE · NOT A LIVE CUSTOMER ACCOUNT</span><h2 id="projectTitle">Residential roof inspection</h2><div class="muted tiny" id="projectSubtitle">Fictional Roof A · Dallas–Fort Worth example</div></div><div class="selector" role="group" aria-label="Choose fictional project"><button type="button" id="resBtn" aria-pressed="true" data-project="residential">⌂ Residential</button><button type="button" id="commBtn" aria-pressed="false" data-project="commercial">▤ Commercial</button></div></div>
- <nav class="tabs" role="tablist" aria-label="Demo features">
+<section class="workspace" id="workspace" aria-label="SmartInspect interactive public demo">
+ <div class="workspace-head"><div><span class="kicker">DEMO WORKSPACE · NOT A LIVE CUSTOMER ACCOUNT</span><h2 id="projectTitle">Residential roof inspection</h2><div class="muted tiny" id="projectSubtitle">Fictional Roof A · Dallas–Fort Worth example</div></div><div class="selector" role="group" aria-label="Choose fictional project"><button type="button" id="resBtn" aria-pressed="true" data-project="residential">⌂ Residential</button><button type="button" id="commBtn" aria-pressed="false" data-project="commercial">▤ Commercial</button><button type="button" id="resetDemo" class="reset-button">↺ Restart</button></div></div>
+ <nav class="tabs" id="demoTabs" role="tablist" aria-label="Demo features">
   <button class="tab" type="button" role="tab" id="tab-overview" aria-selected="true" aria-controls="panel-overview" data-tab="overview">Overview</button>
   <button class="tab" type="button" role="tab" id="tab-inspection" aria-selected="false" aria-controls="panel-inspection" data-tab="inspection">Inspection</button>
+  <button class="tab" type="button" role="tab" id="tab-evidence" aria-selected="false" aria-controls="panel-evidence" data-tab="evidence">Evidence</button>
   <button class="tab" type="button" role="tab" id="tab-estimate" aria-selected="false" aria-controls="panel-estimate" data-tab="estimate">Visual proposal</button>
   <button class="tab" type="button" role="tab" id="tab-materials" aria-selected="false" aria-controls="panel-materials" data-tab="materials">Roof systems</button>
   <button class="tab" type="button" role="tab" id="tab-review" aria-selected="false" aria-controls="panel-review" data-tab="review">Quality review</button>
  </nav>
+ <p class="tab-hint">Swipe sideways to see all six feature tabs ↔</p>
  <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
   <h3>Know the property before proposing work.</h3><p class="lead">A fictional inspection journey from visible roof conditions to a clearly documented, reviewable scope.</p>
   <div class="two">
    <div class="roofmap">
-    <svg viewBox="0 0 570 320" xmlns="http://www.w3.org/2000/svg" aria-label="Conceptual roof-plane map with three labeled sections, not a real property measurement">
+    <svg id="residentialPlan" role="img" viewBox="0 0 570 320" xmlns="http://www.w3.org/2000/svg" aria-label="Conceptual roof-plane map with three labeled sections, not a real property measurement">
      <defs><linearGradient id="roofA" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#53788a"/><stop offset="1" stop-color="#24465c"/></linearGradient></defs>
      <path d="M82 98L290 35L492 132L275 209Z" fill="url(#roofA)" stroke="#203f56" stroke-width="4"/>
      <path d="M82 98L275 209L227 287L60 182Z" fill="#819dac" stroke="#294d64" stroke-width="4"/>
@@ -110,7 +57,26 @@
      <g font-size="17" font-weight="800" text-anchor="middle"><rect x="191" y="99" width="72" height="36" rx="18" fill="#d92342"/><text x="227" y="123" fill="white">A</text><rect x="120" y="201" width="72" height="36" rx="18" fill="#167d83"/><text x="156" y="225" fill="white">B</text><rect x="346" y="222" width="72" height="36" rx="18" fill="#246b9d"/><text x="382" y="246" fill="white">C</text></g>
      <text x="454" y="45" font-size="12" fill="#426274" font-weight="800">N ↑</text>
     </svg>
-    <div class="caption">Conceptual roof-plane identification · No aerial imagery, measurements, or surveyed property</div>
+    <svg id="commercialPlan" role="img" hidden viewBox="0 0 570 320" xmlns="http://www.w3.org/2000/svg" aria-label="Conceptual commercial low-slope roof map with parapets, two equipment curbs and two drains; not surveyed geometry">
+      <path d="M68 70L472 53L518 228L102 271Z" fill="#abc3cf" stroke="#476b80" stroke-width="6"/>
+      <path d="M88 85L456 72L496 212L118 247Z" fill="#dce8ed" stroke="#7195a5" stroke-width="2"/>
+      <path d="M285 78L305 234" stroke="#87a6b4" stroke-width="2" stroke-dasharray="10 8"/>
+      <path d="M105 162L481 140" stroke="#87a6b4" stroke-width="2" stroke-dasharray="10 8"/>
+      <g fill="#7894a1" stroke="#34586e" stroke-width="3">
+        <path d="M184 104L263 100L269 149L190 153Z"/>
+        <path d="M358 159L433 154L440 203L365 208Z"/>
+      </g>
+      <g font-size="14" font-family="sans-serif" font-weight="700" fill="#fff" text-anchor="middle">
+        <text x="225" y="131">HVAC</text><text x="401" y="188">CURB</text>
+      </g>
+      <circle cx="166" cy="211" r="15" fill="#187a9a" stroke="#fff" stroke-width="4"/>
+      <circle cx="343" cy="118" r="15" fill="#187a9a" stroke="#fff" stroke-width="4"/>
+      <g font-size="13" font-family="sans-serif" fill="#42677b" font-weight="700">
+        <text x="125" y="235">D-1</text><text x="346" y="90">D-2</text>
+        <text x="101" y="50">PARAPET</text><text x="406" y="286">ROOF ZONE B</text>
+      </g>
+    </svg>
+    <div class="caption"><b id="overviewProjectType">Pitched-shingle roof</b> · Conceptual zones only; no aerial imagery, surveyed measurements, or real property</div>
    </div>
    <div class="card soft">
     <span class="kicker">SYNTHETIC INSPECTION SNAPSHOT</span>
@@ -121,105 +87,77 @@
    </div>
   </div>
   <div class="flow"><div class="flow-step"><span class="number">1</span><b>Inspect</b>30 guided checkpoints</div><div class="flow-step"><span class="number">2</span><b>Document</b>Locations and sample evidence IDs</div><div class="flow-step"><span class="number">3</span><b>Prepare</b>Unpriced sample scope</div><div class="flow-step"><span class="number">4</span><b>Review</b>Human sign-off required</div></div>
+  <button type="button" class="btn light tour-next" data-next-tab="inspection">Next: Guided inspection →</button>
  </section>
  <section class="panel" id="panel-inspection" role="tabpanel" aria-labelledby="tab-inspection" hidden>
   <h3>30-point guided inspection</h3><p class="lead">Select a checkpoint to inspect the fictional sample observation. No images have been fabricated as actual inspection evidence.</p>
   <div class="report-header"><div><b id="inspectionCount">24 reviewed · 4 follow-up · 2 inaccessible</b><div class="tiny muted">Example workflow—not proof of work performed</div></div><span class="status pending">NOT SIGNED</span></div>
-  <div class="progress-line" aria-label="Fictional checklist coverage"><span></span></div>
+  <div class="progress-line" aria-label="Fictional reviewed checkpoint count"><span id="inspectionProgress" role="progressbar" aria-label="Reviewed checklist items" aria-valuemin="0" aria-valuenow="24" aria-valuemax="30"></span></div>
   <div class="filterset" role="group" aria-label="Filter checkpoints"><button data-filter="all" aria-pressed="true">All 30</button><button data-filter="ok" aria-pressed="false">Reviewed</button><button data-filter="flag" aria-pressed="false">Needs follow-up</button><button data-filter="limit" aria-pressed="false">Inaccessible</button></div>
+  <label class="search-label" for="inspectionSearch">Find a checkpoint by component, location, or concern</label>
+  <input id="inspectionSearch" class="search-input" type="search" autocomplete="off" placeholder="Search the fictional inspection">
+  <p class="tiny muted" id="inspectionFilterCount" role="status" aria-live="polite"></p>
   <div class="checks" id="checkpointList"></div>
+  <p class="empty-result" id="checkpointEmpty" hidden>No checkpoints match. Clear the search or choose another filter.</p>
+  <button type="button" class="btn light tour-next" data-next-tab="evidence">Next: Evidence references →</button>
+ </section>
+ <section class="panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
+  <h3>Evidence traceability — without fictional photographs.</h3>
+  <p class="lead">Sample evidence identifiers demonstrate how inspection notes and scope items should be cross-referenced. These tiles are <strong>not real photographs</strong>, claims evidence, or inspection records.</p>
+  <div class="report-header"><div><b id="evidenceOverview">6 fictional evidence reference slots</b><p class="tiny muted" id="evidenceFilterStatus">All fictional slots</p></div><button type="button" class="btn light" id="clearEvidence" hidden>Show all references</button></div>
+  <div id="evidenceGrid" class="evidence-grid"></div>
+  <div class="note">A real inspector must take original photos, preserve accurate location and source records, and obtain appropriate consent. No demo tile represents an actual field photograph.</div>
+  <button type="button" class="btn light tour-next" data-next-tab="estimate">Next: Visual proposal →</button>
  </section>
  <section class="panel" id="panel-estimate" role="tabpanel" aria-labelledby="tab-estimate" hidden>
   <h3>From documented findings to a visual scope.</h3><p class="lead">A demonstration of how a reviewed inspection can generate a proposed-work outline without inventing customer pricing or a signed estimate.</p>
-  <div class="two"><div class="card"><div class="report-header"><div><span class="kicker">FICTIONAL · UNPRICED DRAFT</span><h4 id="estimateTitle" style="margin-top:7px">Residential roofing scope</h4></div><span class="status pending">REVIEW NEEDED</span></div><div id="scopeList"></div></div>
-  <div><div class="card soft" style="margin-bottom:12px"><span class="kicker">ESTIMATE STATUS</span><div class="money" style="margin:13px 0 0">Not priced</div><div class="money-sub">No quote, contract, invoice, acceptance, or warranty included.</div></div><div class="note">Each scope line requires actual supporting inspection findings, authorized quantities, current material specifications, and independent estimate review before it could reach a customer.</div></div></div>
+  <div class="two"><div class="card"><div class="report-header"><div><span class="kicker">FICTIONAL · UNPRICED DRAFT</span><h4 id="estimateTitle" style="margin-top:7px">Residential roofing scope</h4></div><span class="status pending">REVIEW NEEDED</span></div><p class="tiny muted" id="scopeCount">5 sample scope lines</p><div id="scopeList"></div></div>
+  <div><div class="card soft" style="margin-bottom:12px"><span class="kicker">ESTIMATE STATUS</span><div class="money" style="margin:13px 0 0">Not priced</div><div class="money-sub">No quote, contract, invoice, acceptance, or warranty included.</div><p class="tiny muted" id="proposalLimitations"></p><button class="btn light" id="printDemo" type="button">Print fictional sample report</button></div><div class="note">Each scope line requires actual supporting inspection findings, authorized quantities, current material specifications, and independent estimate review before it could reach a customer.</div></div></div>
+  <button type="button" class="btn light tour-next" data-next-tab="materials">Next: Roof-system intelligence →</button>
  </section>
  <section class="panel" id="panel-materials" role="tabpanel" aria-labelledby="tab-materials" hidden>
-  <h3>Manufacturer specification intelligence</h3><p class="lead">Explore illustrative product families and unresolved compatibility requirements. These are not approved roof assemblies.</p>
-  <div class="brands" role="group" aria-label="Choose manufacturer"><button class="brandbtn" data-brand="gaf" aria-pressed="true">GAF</button><button class="brandbtn" data-brand="owens" aria-pressed="false">Owens Corning</button><button class="brandbtn" data-brand="malarkey" aria-pressed="false">Malarkey</button><button class="brandbtn" data-brand="certainteed" aria-pressed="false">CertainTeed</button></div>
-  <div class="two"><div class="card"><span class="kicker">ILLUSTRATIVE PRODUCT REFERENCE</span><h4 style="font-size:23px;margin:10px 0" id="brandTitle">GAF Timberline HDZ</h4><p class="muted tiny" id="brandUnderlay">Deck-Armor field underlayment</p><hr style="border:0;border-top:1px solid #e5eaee;margin:18px 0"><ul class="rules" id="brandRules"></ul></div>
+  <h3>Manufacturer specification intelligence</h3><p class="lead" id="roofMaterialsLead">Explore illustrative product families and unresolved compatibility requirements. These are not approved roof assemblies.</p>
+  <div id="shingleMaterials"><div class="brands" role="group" aria-label="Choose manufacturer"><button class="brandbtn" data-brand="gaf" aria-pressed="true">GAF</button><button class="brandbtn" data-brand="owens" aria-pressed="false">Owens Corning</button><button class="brandbtn" data-brand="malarkey" aria-pressed="false">Malarkey</button><button class="brandbtn" data-brand="certainteed" aria-pressed="false">CertainTeed</button></div>
+  <div class="two"><div class="card"><span class="kicker">ILLUSTRATIVE PRODUCT REFERENCE</span><h4 style="font-size:23px;margin:10px 0" id="brandTitle">GAF Timberline HDZ</h4><p class="muted tiny" id="brandUnderlay">Deck-Armor field underlayment</p><p class="muted tiny" id="brandStarter">Pro-Start starter strip</p><hr style="border:0;border-top:1px solid #e5eaee;margin:18px 0"><ul class="rules" id="brandRules"></ul></div>
   <div class="rulebox"><div class="lock-icon" aria-hidden="true">⌑</div><h4 style="font-size:20px;margin:16px 0 8px">Construction drawing withheld</h4><p style="line-height:1.6;font-size:13px">A visually plausible layer stack is not evidence of correct installation. Eave/rake geometry, leak barriers, ventilation, and manufacturer-specific details require qualified source verification before publication.</p><span class="status pending" id="brandStatus">SOURCE REVIEW PENDING</span></div></div>
+  <p class="tiny muted">Manufacturer references are informational. <a id="brandSource" href="https://www.gaf.com/" target="_blank" rel="noopener noreferrer">Open manufacturer website ↗</a></p>
+  </div>
+  <div id="tpoMaterials" hidden>
+    <div class="two">
+      <div class="card"><span class="kicker">COMMERCIAL MEMBRANE REFERENCE</span><h4 style="font-size:21px;margin:10px 0">TPO · thermoplastic single ply</h4>
+      <p class="muted tiny">A typical membrane category for low-slope commercial roofs; this fictional example does not identify a manufacturer, SKU, attachment pattern, or warranty.</p>
+      <ul class="rules"><li>Verify membrane thickness, cover board and attachment under the selected manufacturer manual.</li><li>Heat-welded seams, penetrations and curb details need field documentation.</li><li>Drainage, slope, parapet and overflow requirements must be evaluated independently.</li><li>Do not apply asphalt-shingle drip-edge or starter-strip details to a TPO assembly.</li></ul></div>
+      <div class="rulebox"><div class="lock-icon" aria-hidden="true">⌑</div><h4>Commercial assembly withheld</h4><p class="tiny muted">No approved TPO installation drawing is published by this public demo. A real commercial specification requires selected manufacturer components and a qualified roof consultant.</p><span class="status pending">SOURCE + FIELD REVIEW REQUIRED</span></div>
+    </div>
+  </div>
+  <button type="button" class="btn light tour-next" data-next-tab="review">Next: Quality and release gates →</button>
  </section>
  <section class="panel" id="panel-review" role="tabpanel" aria-labelledby="tab-review" hidden>
   <h3>Quality and release control</h3><p class="lead">The real engineering pilot requires independent source and visual reviews before any customer-facing construction graphics can be considered. This public demo cannot record approvals.</p>
-  <div class="grade-grid"><div class="grade"><b>Source documents</b><span>Manufacturer revision and product compatibility must be confirmed.</span></div><div class="grade"><b>Second technical reviewer</b><span>Distinct, authorized reviewer must inspect the exact drawing.</span></div><div class="grade"><b>Version fingerprint</b><span>Content or source edits make earlier review evidence stale.</span></div><div class="grade"><b>Customer publication</b><span>Disabled in this public sandbox. No messages or contracts can be sent.</span></div></div>
+  <div class="note"><b>Nothing in this demo can be approved or sent.</b> Review steps are informational only, not clickable sign-off controls.</div>
+  <p id="qaSummary" class="lead" style="margin-top:18px"></p>
+  <div id="qaGateList" class="qa-list"></div>
+  <div class="review-actions"><button id="reviewFollowups" type="button" class="btn light">Review follow-up items</button><button id="reviewLimits" type="button" class="btn light">View inaccessible areas</button></div>
   <div class="note" style="margin-top:18px">This screen is informational only. Clicking through this demonstration never performs an inspection, saves an approval, changes an estimate, or authorizes roof construction.</div>
+  <button type="button" class="btn light tour-next" data-next-tab="overview">Back to overview ↺</button>
  </section>
 </section>
-<footer class="footer"><b>ROOFING GIANT · SMARTINSPECT FICTIONAL DEMO</b><div>Public, read-only experience · No sign-in, email-code gate, account creation, data collection, or live CRM connection.</div><div>All example projects, observations, measurements and scope items are invented solely for product demonstration.</div></footer>
+<section class="faq-section" aria-labelledby="faqTitle">
+  <h2 id="faqTitle">About this SmartInspect demo</h2>
+  <div class="faq-grid">
+    <details><summary>Does this inspect or measure a real building?</summary><p>No. Both properties, their findings, quantities, and reference identifiers are fictional examples. This page cannot inspect a roof or produce a real roof measurement.</p></details>
+    <details><summary>Can I get a real estimate here?</summary><p>No. Example quantities are unpriced placeholders. A real quote requires an authorized inspection, verified measurements, materials, and the actual Roofing Giant sales process.</p></details>
+    <details><summary>What happens to information I enter?</summary><p>There is no account, contact form, or data submission. Checkpoint searches happen only in your current browser tab. The hosting provider may process ordinary connection logs under its own policies.</p></details>
+    <details><summary>Are these manufacturer installation instructions?</summary><p>No. The public demo intentionally withholds construction assemblies. Real installation details need current manufacturer literature and independent professional review.</p></details>
+  </div>
+  <p class="faq-cta">Learn more about the company at <a target="_blank" rel="noopener noreferrer" href="https://roofinggiant.com/">Roofing Giant's official website ↗</a>.</p>
+</section>
+<footer class="footer"><b>ROOFING GIANT · SMARTINSPECT FICTIONAL DEMO</b><div>Public read-only experience · No app login, email-code gate, customer data submissions, or live CRM connection. The hosting provider may process standard connection logs.</div><div>All example projects, observations, measurements and scope items are invented solely for product demonstration.</div></footer>
 </main>
-<script>
-(function(){
- "use strict";
- const residentialNames=["Shingle surface","Ridge cap condition","Starter course","Eave perimeter","Rake perimeter","Drip-edge metal","Valley intersections","Step flashing","Counterflashing","Chimney transition","Pipe boots","Wall transitions","Skylight flashing","Exposed fasteners","Sealant transitions","Deck observations","Soffit intake","Attic exhaust","Attic moisture","Insulation clearance","Gutter condition","Downspout routing","Fascia condition","Soffit condition","Hail impact indicators","Wind uplift indicators","Nearby tree contact","Prior repairs","Interior water signs","Access and safety"];
- const commercialNames=["TPO field membrane","Heat-welded seams","Seam test locations","Roof perimeter","Termination bars","Edge metal","Parapet coping","Coping joints","Base flashing","Corner patches","Penetration collars","Pipe supports","HVAC curb flashing","Primary roof drains","Drain guards","Ponding indicators","Scupper outlets","Overflow drainage","Walkway protection","Fastener reference","Insulation conditions","Deck observations","Slope and flow","Vegetation/debris","Membrane punctures","Previous patches","Roof access","Safety documentation","Roof maintenance records","Moisture investigation"];
- const projects={
- residential:{
-  title:"Residential roof inspection",subtitle:"Fictional Roof A · Dallas–Fort Worth example",type:"Architectural asphalt shingles",
-  description:"Illustrative checks for visible shingle condition, water-shedding edges, penetrations, attic ventilation and safe access.",
-  names:residentialNames,flag:[5,10,25,28],limit:[15,18],
-  scope:[["Evaluate displaced shingle tabs","6 EA","Plane A · DEMO-PHOTO-001 / 002"],["Inspect formed eave drip-edge condition","19 LF","East eave · DEMO-PHOTO-003"],["Assess pipe flashing and boot condition","2 EA","Upper roof · DEMO-PHOTO-004 / 005"],["Document inaccessible decking for follow-up","Review","Hidden assembly · no verified photo"]],
-  estimate:"Residential shingle repair evaluation"
- },
- commercial:{
-  title:"Commercial roof inspection",subtitle:"Fictional Roof B · Dallas–Fort Worth example",type:"TPO single-ply low-slope membrane",
-  description:"Illustrative checks for membrane condition, seams, drains, equipment curbs, edge terminations and roof access.",
-  names:commercialNames,flag:[1,12,15,24],limit:[20,29],
-  scope:[["Evaluate suspected seam irregularities","3 LOC","North field · DEMO-PHOTO-101 / 102"],["Inspect HVAC curb terminations","2 EA","Equipment zone · DEMO-PHOTO-103"],["Review primary roof drainage","1 LOC","Drain 01 · DEMO-PHOTO-104"],["Document concealed insulation limitations","Review","No destructive verification performed"]],
-  estimate:"Commercial TPO investigation outline"
- }
- };
- const manufacturers={
-  gaf:{title:"GAF · Timberline HDZ",underlay:"Deck-Armor synthetic underlayment",status:"SOURCE REVIEW PENDING",rules:["Check the exact shingle and starter-strip product editions.","Conventional eave and rake drip-edge ordering differs.","Leak barriers need localized placement and compatible laps.","Current vent product, slot details and NFVA require separate verification."]},
-  owens:{title:"Owens Corning · Duration",underlay:"ProArmor synthetic underlayment",status:"INSTALLER GUIDE REVIEW",rules:["Verify direct current installation instructions before rendering.","Starter Strip Plus is a separate perimeter component.","Low-slope assemblies require manufacturer-specific methods.","No warranty or wind-resistance entitlement is inferred."]},
-  malarkey:{title:"Malarkey · Vista AR",underlay:"Secure Start Plus synthetic underlayment",status:"TECHNICAL SIGN-OFF PENDING",rules:["Malarkey's guide identifies conventional eave and rake overlap order.","Smart Start applies at the perimeter, not throughout the field.","Special eave protection is a distinct localized assembly.","Even documented geometry requires qualified construction review."]},
-  certainteed:{title:"CertainTeed · Landmark",underlay:"RoofRunner synthetic underlayment",status:"INSTALLER GUIDE REVIEW",rules:["Current Landmark application guide must be verified.","SwiftStart is a distinct starter course.","WinterGuard may be needed in project-specific vulnerable areas.","Complete system fire/wind/warranty claims require written support."]}
- };
- let activeProject="residential", activeTab="overview", filter="all", activeBrand="gaf";
- const byId=id=>document.getElementById(id);
- const el=(tag,className,content)=>{const e=document.createElement(tag);if(className)e.className=className;if(content!==undefined)e.textContent=content;return e;};
- function fillCheckpoints(){
-  const p=projects[activeProject],root=byId("checkpointList");root.textContent="";
-  const data=p.names.map((name,index)=>({name,index,status:p.flag.includes(index)?"flag":p.limit.includes(index)?"limit":"ok"}));
-  data.filter(x=>filter==="all"||x.status===filter).forEach(x=>{
-   const d=el("details"),sum=el("summary");sum.append(el("span","",String(x.index+1).padStart(2,"0")+". "+x.name));
-   const label=x.status==="ok"?"Reviewed":x.status==="flag"?"Follow-up":"Inaccessible";
-   sum.append(el("span","status "+x.status,label));d.append(sum);
-   let detail=x.status==="ok"?"Fictional visual review recorded for demonstration. Actual observations, photos and measurements would be required.":x.status==="flag"?"Fictional sample condition requires an inspector to confirm location, photographic evidence, scope, and repair options.":"Area was not accessible in this simulated inspection. No concealed condition has been verified.";
-   const text=el("p","",detail);d.append(text);root.append(d);
-  });
- }
- function refresh(){
-  const p=projects[activeProject];byId("projectTitle").textContent=p.title;byId("projectSubtitle").textContent=p.subtitle;
-  byId("overviewType").textContent=p.type;byId("overviewDescription").textContent=p.description;
-  byId("estimateTitle").textContent=p.estimate;
-  for(const b of document.querySelectorAll("[data-project]"))b.setAttribute("aria-pressed",String(b.dataset.project===activeProject));
-  const summaries=byId("summaryBadges");summaries.textContent="";
-  for(const [label,cl] of [["24 reviewed","ok"],["4 follow-up","flag"],["2 inaccessible","limit"]])summaries.append(el("span","status "+cl,label));
-  const root=byId("scopeList");root.textContent="";
-  p.scope.forEach(([heading,qty,source])=>{const row=el("div","report-row"),left=el("div");left.append(el("h4","",heading),el("p","",source));row.append(left,el("div","qty",qty));root.append(row)});
-  fillCheckpoints();
- }
- function showTab(name){
-  activeTab=name;
-  for(const b of document.querySelectorAll("[data-tab]")){const selected=b.dataset.tab===name;b.setAttribute("aria-selected",String(selected));b.tabIndex=selected?0:-1;}
-  for(const panel of document.querySelectorAll(".panel"))panel.hidden=panel.id!=="panel-"+name;
-  byId("tab-"+name).scrollIntoView({block:"nearest",inline:"nearest"});
- }
- function brand(name){
-  activeBrand=name;
-  for(const b of document.querySelectorAll("[data-brand]"))b.setAttribute("aria-pressed",String(b.dataset.brand===name));
-  const m=manufacturers[name];byId("brandTitle").textContent=m.title;byId("brandUnderlay").textContent=m.underlay;byId("brandStatus").textContent=m.status;
-  const ul=byId("brandRules");ul.textContent="";m.rules.forEach(r=>ul.append(el("li","",r)));
- }
- document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
- document.querySelectorAll("[data-project]").forEach(b=>b.addEventListener("click",()=>{activeProject=b.dataset.project;refresh()}));
- document.querySelectorAll("[data-brand]").forEach(b=>b.addEventListener("click",()=>brand(b.dataset.brand)));
- document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.filter===filter)));fillCheckpoints()}));
- byId("startDemo").addEventListener("click",()=>{showTab("inspection");byId("panel-inspection").scrollIntoView({block:"start"})});
- byId("viewSample").addEventListener("click",()=>{showTab("estimate");byId("panel-estimate").scrollIntoView({block:"start"})});
- refresh();brand(activeBrand);showTab("overview");
-})();
-</script>
+<section id="printReport" aria-label="Printable fictional sample report"></section>
+<p class="screen-reader-only" id="demoAnnouncement" aria-live="polite" aria-atomic="true"></p>
+<noscript><p class="no-script">Enable JavaScript to explore the fictional inspection workflow. No account or sign-in is needed.</p></noscript>
+<script defer src="./data.js"></script>
+<script defer src="./app.js"></script>
 </body>
 </html>
